@@ -10,8 +10,9 @@ import io.cucumber.java.en.When;
 public class StepDefinition {
 WebDriver driver=null;
 @Given("I want to write a step with precondition")
-public void i_want_to_write_a_step_with_precondition() {
-   
+public void goToFacebook() {
+	driver=new ChromeDriver();
+   driver.get("https://www.facebook.com");
 }
 
 @Given("some other precondition")
