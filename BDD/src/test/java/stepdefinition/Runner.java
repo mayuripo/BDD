@@ -2,7 +2,12 @@ package stepdefinition;
 
 import org.testng.annotations.Test;
 
-@Test
-public class Runner {
 
+public class Runner extends StepDefinition{
+	@Test
+public void login()
+{
+StepDefinition c=new StepDefinition();
+c.goToFacebook();
+}
 }
