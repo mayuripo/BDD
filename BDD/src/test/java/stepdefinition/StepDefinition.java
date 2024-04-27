@@ -2,6 +2,7 @@ package stepdefinition;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.Given;
@@ -16,9 +17,34 @@ public void goToFacebook() {
 	driver=new ChromeDriver();
    driver.get("https://www.facebook.com");
 }
+@Given("to create a facebook account")
 public void clickOnCreateAccount()
 {
+	
 	driver.findElement(By.linkText("Create new account")).click();
+}
+@Given("send data to elemments")
+public void passData()
+{
+	System.out.println("in passData()");
+ WebElement first=driver.findElement(By.xpath("//input[@name='firstname']"));
+   first.sendKeys("kanak"); 
+    WebElement lastName=driver.findElement(By.name("lastname"));
+    lastName.sendKeys("suvarna");
+    WebElement emailField = driver.findElement(By.name("reg_email__"));
+    emailField.sendKeys("your.email@example.com");
+
+    WebElement passwordField = driver.findElement(By.name("reg_passwd__"));
+    passwordField.sendKeys("YourPassword");
+
+    // You can add more fields (e.g., birthday, gender) as needed
+
+    // Click on the "Sign Up" button
+    WebElement signUpButton = driver.findElement(By.name("websubmit"));
+    signUpButton.click();
+
+    // Close the browser
+    driver.quit();
 }
 
 /*

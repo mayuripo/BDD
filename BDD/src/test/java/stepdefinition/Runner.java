@@ -9,5 +9,7 @@ public void login()
 {
 StepDefinition c=new StepDefinition();
 c.goToFacebook();
+c.clickOnCreateAccount();
+c.passData();
 }
 }
