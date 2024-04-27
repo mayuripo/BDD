@@ -29,22 +29,22 @@ public void passData()
 	System.out.println("in passData()");
  WebElement first=driver.findElement(By.xpath("//input[@name='firstname']"));
    first.sendKeys("kanak"); 
-    WebElement lastName=driver.findElement(By.name("lastname"));
-    lastName.sendKeys("suvarna");
-    WebElement emailField = driver.findElement(By.name("reg_email__"));
-    emailField.sendKeys("your.email@example.com");
-
-    WebElement passwordField = driver.findElement(By.name("reg_passwd__"));
-    passwordField.sendKeys("YourPassword");
-
-    // You can add more fields (e.g., birthday, gender) as needed
-
-    // Click on the "Sign Up" button
-    WebElement signUpButton = driver.findElement(By.name("websubmit"));
-    signUpButton.click();
-
-    // Close the browser
-    driver.quit();
+	/*
+	 * WebElement lastName=driver.findElement(By.name("lastname"));
+	 * lastName.sendKeys("suvarna"); WebElement emailField =
+	 * driver.findElement(By.name("reg_email__"));
+	 * emailField.sendKeys("your.email@example.com");
+	 * 
+	 * WebElement passwordField = driver.findElement(By.name("reg_passwd__"));
+	 * passwordField.sendKeys("YourPassword");
+	 * 
+	 * // You can add more fields (e.g., birthday, gender) as needed
+	 * 
+	 * // Click on the "Sign Up" button WebElement signUpButton =
+	 * driver.findElement(By.name("websubmit")); signUpButton.click();
+	 * 
+	 * // Close the browser driver.quit();
+	 */
 }
 
 /*
